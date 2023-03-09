@@ -39,7 +39,7 @@ def load_image(image_file):
 
 
 def main():
-    st.image("C:\\Users\\avira\\Downloads\\img2.jpg", use_column_width=True)
+    st.image("D:\\GithubDesktop\\Plant-Disease-Detection-Application\\img2.jpg", use_column_width=True)
 
     st.title("Tomato Disease Prediction")
     st.subheader("Please upload the Tomato leaf image : ")
@@ -50,9 +50,9 @@ def main():
         st.image(img, caption="Uploaded Image")
         img = tf.keras.preprocessing.image.img_to_array(img)
         model = tf.keras.models.load_model(
-            "C:\\Users\\avira\\Downloads\\model_vgg19.h5", compile=False)
+            "D:\\GithubDesktop\\Plant-Disease-Detection-Application\\model_vgg19.h5", compile=False)
         model.compile()
-        model.save("C:\\Users\\avira\\Downloads\\model_vgg19.h5")
+        model.save("D:\\GithubDesktop\\Plant-Disease-Detection-Application\\model_vgg19.h5")
         model.compile()
         img = prepare(img)
 
